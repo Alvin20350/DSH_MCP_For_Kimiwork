@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Kimi 子代理桥接",
+    "description": "让 Kimi 将可恢复、可重连的任务委派给 DeepSeek Harness 持久会话。"
+  }
+}

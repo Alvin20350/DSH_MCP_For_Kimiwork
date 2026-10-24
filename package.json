@@ -1,0 +1,19 @@
+{
+  "name": "kimi-deepseek-subagent",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "description": "Portable, reconnectable DeepSeek Harness subagents for Kimi Work and Kimi Code",
+  "scripts": {
+    "build": "node scripts/build.mjs && node --check packages/personal/deepseek-subagent/scripts/stdio-proxy.bundle.mjs",
+    "test": "node --test packages/harness-plugin/test/*.test.js packages/personal/deepseek-subagent/test/*.test.js",
+    "check": "node scripts/check-repo.mjs && node --check packages/harness-plugin/index.js && node --check packages/harness-plugin/lib/bridge.js && node --check packages/harness-plugin/lib/events.js && node --check packages/harness-plugin/lib/server.js && node --check packages/harness-plugin/lib/store.js && node --check packages/harness-plugin/lib/version.js && node --check scripts/install.mjs && node --check scripts/doctor.mjs && node --check scripts/live-smoke.mjs && node --check packages/personal/deepseek-subagent/scripts/stdio-proxy.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "install:system": "node scripts/install.mjs",
+    "smoke": "node scripts/live-smoke.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

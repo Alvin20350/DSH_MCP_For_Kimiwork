@@ -1,0 +1,9 @@
+- insert:
+    - id: kimi-subagent-bridge
+      name: '@local/dsh-kimi-bridge'
+      config:
+        host: 127.0.0.1
+        port: 37841
+        tokenEnvVar: KIMI_DSH_BRIDGE_TOKEN
+        allowedRoots: []
+        allowUntestedHarness: false

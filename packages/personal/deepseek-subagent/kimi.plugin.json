@@ -1,0 +1,57 @@
+{
+  "$schema": "https://catalog.msh.team/misc/kimi.plugin.schema.json",
+  "name": "deepseek-subagent",
+  "version": "0.1.2",
+  "description": "通过 DeepSeek Harness Desktop 创建可恢复、可重连的外挂子代理，支持工作区、持久会话、进度查看、消息注入和继续执行。",
+  "keywords": [
+    "DeepSeek",
+    "Harness",
+    "子代理",
+    "重连",
+    "持久会话"
+  ],
+  "author": "Local developer",
+  "license": "MIT",
+  "skillInstructions": "",
+  "interface": {
+    "displayName": "DeepSeek 子代理",
+    "shortDescription": "在 Kimi 里使用 DeepSeek 子代理",
+    "longDescription": "通过 DeepSeek Harness Desktop 创建可恢复、可重连的外挂子代理，支持工作区、持久会话、进度查看、消息注入和继续执行。",
+    "developerName": "Local developer",
+    "websiteURL": "",
+    "iconUrl": "",
+    "category": "PRODUCTIVITY",
+    "defaultLocale": "zh-CN",
+    "locales": "./locales/",
+    "tryPrompts": [
+      "让 DS 在当前工作区检查测试失败原因，完成后只汇报结论",
+      "查看 DS 当前进度",
+      "continue",
+      "把不要修改公开接口注入刚才的 DS 会话"
+    ],
+    "skillOverrides": {
+      "deepseek-subagent": {
+        "displayName": "DeepSeek 子代理",
+        "description": "在 Kimi 里使用 DeepSeek 子代理"
+      }
+    },
+    "mcpOverrides": {
+      "deepseek-subagent": {
+        "displayName": "DeepSeek 子代理",
+        "description": "在 Kimi 里使用 DeepSeek 子代理"
+      }
+    }
+  },
+  "skills": "./skills/",
+  "mcpServers": {
+    "deepseek-subagent": {
+      "command": "node",
+      "args": ["./scripts/stdio-proxy.bundle.mjs"],
+      "startupTimeoutMs": 10000,
+      "toolTimeoutMs": 30000
+    }
+  },
+  "sessionStart": {
+    "skill": "deepseek-subagent"
+  }
+}

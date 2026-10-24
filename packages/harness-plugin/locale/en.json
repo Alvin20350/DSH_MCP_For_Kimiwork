@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Kimi Subagent Bridge",
+    "description": "Lets Kimi delegate persistent, reconnectable work to DeepSeek Harness sessions."
+  }
+}

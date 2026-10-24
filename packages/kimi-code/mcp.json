@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "deepseek-subagent": {
+      "command": "node",
+      "args": ["./stdio-proxy.bundle.mjs"],
+      "startupTimeoutMs": 10000,
+      "toolTimeoutMs": 30000
+    }
+  }
+}

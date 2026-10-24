@@ -1,0 +1,24 @@
+{
+  "displayName": "DeepSeek Subagent",
+  "shortDescription": "Use persistent DeepSeek Harness subagents in Kimi",
+  "longDescription": "Delegate recoverable and reconnectable work to DeepSeek Harness Desktop with persistent workspaces and sessions, progress inspection, message injection, and continuation.",
+  "developerName": "Local developer",
+  "tryPrompts": [
+    "Ask DS to inspect the test failures in this workspace and report only the conclusions",
+    "Show DS's current progress",
+    "continue",
+    "Inject a no-public-API-changes constraint into the current DS session"
+  ],
+  "mcpOverrides": {
+    "deepseek-subagent": {
+      "displayName": "DeepSeek Subagent",
+      "description": "Persistent DeepSeek Harness subagents"
+    }
+  },
+  "skillOverrides": {
+    "deepseek-subagent": {
+      "displayName": "DeepSeek Subagent",
+      "description": "Persistent DeepSeek Harness subagents"
+    }
+  }
+}

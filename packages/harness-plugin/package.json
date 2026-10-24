@@ -1,0 +1,29 @@
+{
+  "name": "@local/dsh-kimi-bridge",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Reconnectable Kimi subagent bridge for DeepSeek Harness Desktop",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.3",
+    "zod": "^4.4.3"
+  },
+  "license": "MIT"
+}
